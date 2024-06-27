@@ -51,13 +51,8 @@ export default function SearchPage() {
           <nav>
             <ul>
               <li>Home</li>
-              <li>Issues</li>
-              <li>Pull requests</li>
-              <li>Projects</li>
-              <li>Discussions</li>
-              <li>Codespaces</li>
               <li>Explore</li>
-              <li>Marketplace</li>
+              <li>Jobs</li>
             </ul>
           </nav>
         </div>
@@ -74,23 +69,9 @@ export default function SearchPage() {
         </div>
         <div className={styles.rightNavContent}>
           <ul>
-            <li>Set status</li>
             <li>Your profile</li>
-            <li>Your repositories</li>
-            <li>Your Copilot</li>
-            <li>Your projects</li>
-            <li>Your stars</li>
-            <li>Your gists</li>
-            <li>Your organizations</li>
-            <li>Your enterprises</li>
-            <li>Your sponsors</li>
-            <li>Try Enterprise</li>
-            <li>Feature preview</li>
             <li>Settings</li>
-            <li>GitHub Docs</li>
-            <li>GitHub Support</li>
-            <li>GitHub Community</li>
-            <li>Sign out</li>
+            <li>Logout</li>
           </ul>
         </div>
       </div>

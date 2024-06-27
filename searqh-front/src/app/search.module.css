@@ -1,8 +1,9 @@
 .container {
-  background-color: #333;
-  height: 100vh;
+  background-color: #0d1117;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  color: #c9d1d9;
 }
 
 .header {
@@ -10,13 +11,13 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  color: white;
+  background-color: #161b22;
 }
 
-.menuButton {
+.menuButton, .profileIcon {
   background: none;
   border: none;
-  color: white;
+  color: #c9d1d9;
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -24,7 +25,7 @@
 .profileIcon {
   width: 2rem;
   height: 2rem;
-  background-color: white;
+  background-color: #c9d1d9;
   border-radius: 50%;
 }
 
@@ -40,7 +41,70 @@
   width: 80%;
   max-width: 500px;
   padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 4px;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  background-color: #0d1117;
+  color: #c9d1d9;
   font-size: 1rem;
+}
+
+.leftNav, .rightNav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 16.66%; /* 1/6 of the screen */
+  background-color: #161b22;
+  transition: transform 0.3s ease-in-out;
+  overflow-y: auto;
+  padding-top: 1rem;
+}
+
+.leftNav {
+  left: 0;
+  transform: translateX(-100%);
+}
+
+.rightNav {
+  right: 0;
+  transform: translateX(100%);
+}
+
+.leftNav.open, .rightNav.open {
+  transform: translateX(0);
+}
+
+.closeNav {
+  background: none;
+  border: none;
+  color: #c9d1d9;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  padding: 0.5rem;
+}
+
+.leftNav .closeNav {
+  right: 1rem;
+}
+
+.rightNav .closeNav {
+  left: 1rem;
+}
+
+.leftNav ul, .rightNav ul {
+  list-style-type: none;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+
+.leftNav li, .rightNav li {
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .leftNav, .rightNav {
+    width: 50%; 
+  }
 }

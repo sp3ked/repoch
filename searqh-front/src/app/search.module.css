@@ -52,11 +52,12 @@
   position: fixed;
   top: 0;
   bottom: 0;
-  width: 16.66%; /* 1/6 of the screen */
+  width: 16.66%;
   background-color: #161b22;
   transition: transform 0.3s ease-in-out;
   overflow-y: auto;
-  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .leftNav {
@@ -67,44 +68,71 @@
 .rightNav {
   right: 0;
   transform: translateX(100%);
+  padding: 1rem;
 }
 
 .leftNav.open, .rightNav.open {
   transform: translateX(0);
 }
 
-.closeNav {
+.navContent {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.rightNavHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.profileInfo {
+  display: flex;
+  align-items: center;
+}
+
+.username {
+  color: #c9d1d9;
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+
+.chevronButton {
   background: none;
   border: none;
-  color: #c9d1d9;
-  font-size: 1.5rem;
+  color: #8b949e;
   cursor: pointer;
-  position: absolute;
-  top: 1rem;
   padding: 0.5rem;
+  font-size: 0.9rem;
 }
 
-.leftNav .closeNav {
-  right: 1rem;
+.rightNavContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
-.rightNav .closeNav {
-  left: 1rem;
-}
-
-.leftNav ul, .rightNav ul {
+.leftNav ul, .rightNavContent ul {
   list-style-type: none;
-  padding: 1rem;
-  margin-top: 3rem;
+  padding: 0;
+  margin: 0;
 }
 
-.leftNav li, .rightNav li {
+.leftNav li {
   margin-bottom: 1rem;
   cursor: pointer;
 }
 
+.rightNavContent li {
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  text-align: right;
+}
+
 @media (max-width: 768px) {
   .leftNav, .rightNav {
-    width: 50%; 
+    width: 50%;
   }
 }

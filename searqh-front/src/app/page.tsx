@@ -1,4 +1,4 @@
-import SearchPage from './searchPage';
+import SearchPage from "./searchPage";
 
 export default function Page() {
   return <SearchPage />;

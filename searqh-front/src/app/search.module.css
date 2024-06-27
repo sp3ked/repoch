@@ -14,7 +14,8 @@
   background-color: #161b22;
 }
 
-.menuButton, .profileIcon {
+.menuButton,
+.profileIcon {
   background: none;
   border: none;
   color: #c9d1d9;
@@ -48,7 +49,8 @@
   font-size: 1rem;
 }
 
-.leftNav, .rightNav {
+.leftNav,
+.rightNav {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -71,7 +73,8 @@
   padding: 1rem;
 }
 
-.leftNav.open, .rightNav.open {
+.leftNav.open,
+.rightNav.open {
   transform: translateX(0);
 }
 
@@ -83,20 +86,9 @@
 
 .rightNavHeader {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-start; /* Align items to the start of the flex container */
+  align-items: center; /* Center items vertically */
   margin-bottom: 1rem;
-}
-
-.profileInfo {
-  display: flex;
-  align-items: center;
-}
-
-.username {
-  color: #c9d1d9;
-  font-weight: bold;
-  margin-left: 0.5rem;
 }
 
 .chevronButton {
@@ -106,6 +98,25 @@
   cursor: pointer;
   padding: 0.5rem;
   font-size: 0.9rem;
+  margin-right: 1rem;
+}
+
+.profileInfo {
+  display: flex;
+  align-items: center;
+}
+
+.profileIcon {
+  width: 2rem;
+  height: 2rem;
+  background-color: #c9d1d9;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.username {
+  color: #c9d1d9;
+  font-weight: bold;
 }
 
 .rightNavContent {
@@ -114,7 +125,8 @@
   align-items: flex-end;
 }
 
-.leftNav ul, .rightNavContent ul {
+.leftNav ul,
+.rightNavContent ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -132,7 +144,8 @@
 }
 
 @media (max-width: 768px) {
-  .leftNav, .rightNav {
+  .leftNav,
+  .rightNav {
     width: 50%;
   }
 }

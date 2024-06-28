@@ -4,8 +4,10 @@
   "description": "Search Engine / dashboard Focused on finding certain startups that have bad SEO on google, this will help consumers find products/startups they need easily rather then trying to find them organically in addition to allowing these startups to get out there.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon src/server.ts"
+    "test": "jest",
+    "dev": " next dev -p 8000",
+    "build": "next build",
+    "start": "next start"
   },
   "keywords": [],
   "author": "",

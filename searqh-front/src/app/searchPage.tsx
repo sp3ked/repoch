@@ -8,6 +8,21 @@ import {
   faChevronRight,
   faBars,
 } from "@fortawesome/free-solid-svg-icons";
+import Card from "./Card";
+
+const featuredStartups = [
+  { name: "EcoTech", description: "Sustainable energy solutions", category: "CleanTech" },
+  { name: "HealthAI", description: "AI-powered health diagnostics", category: "HealthTech" },
+  { name: "FinFlow", description: "Blockchain-based financial services", category: "FinTech" },
+  { name: "SpaceX", description: "Advancing space exploration", category: "Aerospace" }
+];
+
+const trendingStartups = [
+  { name: "DataMind", description: "Big data analytics platform", category: "Data Science" },
+  { name: "VRWorld", description: "Virtual reality experiences", category: "Entertainment" },
+  { name: "GreenGrow", description: "Vertical farming technology", category: "AgriTech" },
+  { name: "CyberShield", description: "Advanced cybersecurity solutions", category: "Security" }
+];
 
 export default function SearchPage() {
   const [leftNavOpen, setLeftNavOpen] = useState(false);
@@ -54,12 +69,33 @@ export default function SearchPage() {
           onClick={() => setRightNavOpen(true)}
         ></button>
       </header>
-      <main className={styles.main}>
+      <div className={styles.searchContainer}>
         <input
           type="text"
           placeholder="Search"
           className={styles.searchInput}
         />
+      </div>
+      <main className={styles.main}>
+        <div className={styles.contentWrapper}>
+          <section className={styles.startupSection}>
+            <h2>Featured</h2>
+            <div className={styles.cardContainer}>
+              {featuredStartups.map((startup, index) => (
+                <Card key={index} {...startup} />
+              ))}
+            </div>
+          </section>
+          
+          <section className={styles.startupSection}>
+            <h2>Trending</h2>
+            <div className={styles.cardContainer}>
+              {trendingStartups.map((startup, index) => (
+                <Card key={index} {...startup} />
+              ))}
+            </div>
+          </section>
+        </div>
       </main>
       <div
         ref={leftNavRef}
@@ -93,11 +129,10 @@ export default function SearchPage() {
             <FontAwesomeIcon icon={faChevronRight} />
           </button>
           <div className={styles.profileInfo}>
+            <span className={styles.username}>username</span>
             <div className={styles.profileIcon}></div>
-            <span className={styles.username}>sp3ked</span>
           </div>
         </div>
-
         <div className={styles.rightNavContent}>
           <ul>
             <li>Your profile</li>

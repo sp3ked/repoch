@@ -14,7 +14,8 @@
   background-color: #222222;
 }
 
-.menuButton, .profileIcon {
+.menuButton,
+.profileIcon {
   background: none;
   border: none;
   color: #ffffff;
@@ -67,11 +68,23 @@
   margin-bottom: 3rem;
 }
 
-.startupSection h2 {
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 1.5rem;
+}
+
+.sectionIcon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  color: #ffffff;
+}
+
+.startupSection h2 {
   color: #ffffff;
   font-size: 1.5rem;
-  text-align: center;
+  margin: 0;
 }
 
 .cardContainer {
@@ -81,7 +94,8 @@
   justify-content: center;
 }
 
-.leftNav, .rightNav {
+.leftNav,
+.rightNav {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -104,7 +118,8 @@
   transform: translateX(100%);
 }
 
-.leftNav.open, .rightNav.open {
+.leftNav.open,
+.rightNav.open {
   transform: translateX(0);
 }
 
@@ -152,19 +167,54 @@
 
 .rightNavContent {
   padding: 1rem;
-  color:aqua;
+  color: aqua;
 }
 
 @media (max-width: 768px) {
   .searchInput {
     max-width: 90%;
   }
-  
+
   .cardContainer {
     gap: 1.5rem;
   }
 
-  .leftNav, .rightNav {
+  .leftNav,
+  .rightNav {
     width: 80%;
   }
+}
+
+.card.loading {
+  animation: pulse 1.5s infinite;
+  background-color: #333333;
+  color: transparent;
+}
+
+.card.loading h3,
+.card.loading p,
+.card.loading .category {
+  background-color: #444444;
+  border-radius: 4px;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+.searchResults {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 1.2rem;
+  color: #ffffff;
 }

@@ -40,6 +40,46 @@
   align-self: flex-start;
 }
 
+.card.loading {
+  animation: pulse 1.5s infinite;
+}
+
+.card.loading .cardTitle,
+.card.loading .cardDescription,
+.card.loading .cardCategory {
+  color: transparent;
+  background-color: #3a3a3a;
+  border-radius: 4px;
+}
+
+.cardTitle {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.cardDescription {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.cardCategory {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+
 @media (max-width: 1200px) {
   .card {
     width: calc(33.33% - 1rem);

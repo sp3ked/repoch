@@ -1,5 +1,5 @@
 .container {
-  background-color: #1a1a1a;
+  background-color: #696868;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,10 +35,8 @@
   justify-content: center;
   align-items: center;
   padding: 1.5rem;
-  background-color: #222222;
   position: sticky;
   top: 0;
-  z-index: 10;
 }
 
 .searchInput {

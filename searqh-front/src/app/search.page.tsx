@@ -117,7 +117,12 @@ export default function SearchPage() {
           onClick={() => setRightNavOpen(true)}
         ></button>
       </header>
-      <div className={styles.searchContainer}>
+      
+      <main className={styles.main}>
+        
+        
+        <div className={styles.contentWrapper}>
+        <div className={styles.searchContainer}>
         <input
           type="text"
           placeholder="Search"
@@ -126,8 +131,7 @@ export default function SearchPage() {
           onChange={handleSearch}
         />
       </div>
-      <main className={styles.main}>
-        <div className={styles.contentWrapper}>
+          
           {searchQuery ? (
             <SearchResults query={searchQuery} isLoading={isLoading} />
           ) : (
